@@ -15,11 +15,8 @@ Meteor.methods({
       });
     };
 
-    return encodeAsBase64(url).then((base64String) => {
-      return base64String;
-    })
-    .catch((error) => {
-      throw new Meteor.Error('500', `${error}`);
-    });
+    return encodeAsBase64(url)
+    .then((base64String) => base64String)
+    .catch((error) => { throw new Meteor.Error('500', `${error}`); });
   },
 });
