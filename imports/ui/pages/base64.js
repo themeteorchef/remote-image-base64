@@ -8,6 +8,7 @@ export class Base64 extends React.Component {
     super(props);
     this.state = { base64String: null };
     this.handleBase64Conversion = this.handleBase64Conversion.bind(this);
+    this.renderPreview = this.renderPreview.bind(this);
   }
 
   handleBase64Conversion() {
